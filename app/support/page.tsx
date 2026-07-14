@@ -61,7 +61,7 @@ const departments = [
   {
     icon: Phone,
     dept: 'Feedback',
-    nums: ['Calls: +232 7634 0991', 'WhatsApp: +1 (240) 605-2966'],
+    nums: ['WhatsApp only: +232 7634 0991'],
     email: 'ceo@signature-connect.com',
   },
 ]
