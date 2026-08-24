@@ -9,10 +9,10 @@ export default function SpeedTestPage() {
       <Header />
 
       {/* Hero */}
-      <section className="py-20 lg:py-32 min-h-[50vh] flex items-center relative z-0 premium-gradient">
+      <section className="py-20 sm:py-24 lg:py-28 flex items-center relative z-0 premium-surface">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center w-full">
-          <h1 className="max-w-2xl mx-auto font-serif font-bold text-5xl text-white mb-8 md:text-6xl md:leading-normal">
-            Internet <span className="gradient-text">Speed Test</span>
+          <h1 className="max-w-3xl mx-auto font-serif font-bold text-4xl sm:text-5xl lg:text-6xl text-white mb-8 leading-tight">
+            Internet <span className="accent-text">Speed Test</span>
           </h1>
           <p className="max-w-xl mx-auto text-lg font-normal leading-7 text-[#bdb8d8] font-sans">
             Check your internet speed directly from your browser to see how fast your connection is right now.

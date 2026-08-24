@@ -23,11 +23,11 @@ const discoverItems = [
 
 export default function DiscoverMore() {
   return (
-    <section className="py-24 sm:py-32 lg:py-40 min-h-screen flex items-center premium-gradient">
+    <section className="section premium-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="text-center mb-16 lg:mb-24">
+        <div className="text-center section-head">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif text-white mb-6">
-            Discover <span className="gradient-text">More</span>
+            Discover <span className="accent-text">More</span>
           </h2>
           <p className="text-[#bdb8d8] text-lg sm:text-xl max-w-2xl mx-auto font-sans">
             Explore our comprehensive range of services designed to keep you connected.
@@ -46,7 +46,7 @@ export default function DiscoverMore() {
                 />
                 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                <div className="absolute inset-0 bg-black/55" />
                 
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-8">

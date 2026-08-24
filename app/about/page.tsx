@@ -29,13 +29,13 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero */}
-      <section className="py-20 lg:py-32 min-h-[50vh] flex items-center relative z-0 premium-gradient">
+      <section className="py-20 sm:py-24 lg:py-28 flex items-center relative z-0 premium-surface">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center w-full">
-          <h1 className="max-w-2xl mx-auto font-serif font-bold text-8xl text-white mb-8 md:text-6xl md:leading-normal">
-            Transforming Connectivity with <span className="gradient-text">Premium Technology</span>
+          <h1 className="max-w-3xl mx-auto font-serif font-bold text-4xl sm:text-5xl lg:text-6xl text-white mb-8 leading-tight">
+            Transforming Connectivity with <span className="accent-text">Premium Technology</span>
           </h1>
           <p className="max-w-xl mx-auto text-lg font-normal leading-7 text-[#bdb8d8] font-sans">
-            Experience intelligent connectivity and discover a better way to manage your entire digital lifestyle seamlessly.
+            Signature Connect Internet Service Provider delivers high-speed internet access to homes, offices, and commercial establishments, with nationwide coverage across the country.
           </p>
         </div>
       </section>
@@ -105,10 +105,10 @@ export default function AboutPage() {
             {stats.map(({ stat, title, desc }) => (
               <div
                 key={title}
-                className="w-full max-lg:max-w-2xl mx-auto lg:w-1/3 bg-white p-8 rounded-2xl border-2 border-[#7C5CF6] hover:-translate-y-1 transition-all duration-300"
+                className="w-full max-lg:max-w-2xl mx-auto lg:w-1/3 bg-white p-8 rounded-2xl border-2 border-[#7454EC] hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="flex gap-6">
-                  <div className="font-serif text-3xl font-bold text-[#7C5CF6]">{stat}</div>
+                  <div className="font-serif text-3xl font-bold text-[#7454EC]">{stat}</div>
                   <div className="flex-1">
                     <h4 className="text-xl text-[#0f0d1e] font-semibold mb-3 font-serif">{title}</h4>
                     <p className="text-sm text-[#6d6888] leading-6 font-sans">{desc}</p>
@@ -166,16 +166,14 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="border-2 border-[#7C5CF6] rounded-2xl p-12 xl:p-16 premium-gradient text-center">
+          <div className="border-2 border-[#7454EC] rounded-2xl p-12 xl:p-16 premium-surface text-center">
             <h2 className="font-serif text-4xl sm:text-5xl text-white font-bold mb-6">Ready for Premium Connectivity?</h2>
             <p className="text-[#bdb8d8] mb-12 max-w-2xl mx-auto font-sans text-lg">
-              Join our community of premium clients and experience enterprise-grade fiber connectivity.
+              Talk to us about fiber, Starlink, or PMP &mdash; on monthly plans with prepaid and postpaid options.
             </p>
-            <Link href="/">
-              <Button className="btn-signature-primary px-10 py-5 text-lg font-serif font-bold rounded-xl">
-                Get Premium Quote
-              </Button>
-            </Link>
+            <Button asChild className="btn-signature-primary px-10 py-5 text-lg font-serif font-bold rounded-xl">
+              <Link href="/">Get Premium Quote</Link>
+            </Button>
           </div>
         </div>
       </section>

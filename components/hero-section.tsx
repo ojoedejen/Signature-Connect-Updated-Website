@@ -31,7 +31,7 @@ Last Name: ${formData.last_name}
 Phone: ${formData.phone}
 Address: ${formData.address}
 Location Address: ${formData.location_address}`
-    window.open(`https://wa.me/23233233620?text=${encodeURIComponent(message)}`, '_blank')
+    window.open(`https://wa.me/23276340991?text=${encodeURIComponent(message)}`, '_blank')
     setFormData({
       first_name: '',
       last_name: '',
@@ -50,7 +50,7 @@ Location Address: ${formData.location_address}`
       style={{
         backgroundImage:
           "url('https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/318c114f9_image.png')",
-        backgroundColor: '#09004c'
+        backgroundColor: '#0f0d1e'
       }}
     >
       <div className="absolute inset-0 bg-black/40 z-0" />
@@ -59,27 +59,35 @@ Location Address: ${formData.location_address}`
           {/* Left Content */}
           <div className="text-white space-y-4 lg:space-y-6 text-center lg:text-left">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-serif leading-tight">
-              Premium{' '}
-              <span className="gradient-text block mt-2">Fiber Internet Service</span>
+              High-Speed Internet for{' '}
+              <span className="accent-text block mt-2">Homes, Offices &amp; Business</span>
             </h1>
             <p className="text-base sm:text-lg lg:text-xl text-blue-100 max-w-lg mx-auto lg:mx-0 font-sans leading-relaxed">
-              Enjoy lightning-fast speeds and reliable connectivity with our advanced internet solutions. 24/7 dedicated support.
+              Signature Connect Internet Service Provider delivers high-speed internet access to homes, offices, and commercial establishments &mdash; over Fiber, Starlink, and PMP, with nationwide coverage.
             </p>
+            <ul className="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-3 text-sm sm:text-base text-blue-100 font-sans">
+              {['Competitive pricing', 'Prepaid & postpaid', 'Nationwide coverage'].map((item) => (
+                <li key={item} className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FFB547]" />
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Right Form */}
           <div className="flex justify-center lg:justify-end mt-4 lg:mt-0">
             <Card className="w-full max-w-sm glass-card-strong p-4 sm:p-5 lg:p-6 rounded-2xl shadow-2xl tech-glow border-0">
               {/* Tabs */}
-              <div className="flex bg-gradient-to-r from-[#FFCC00] to-[#FEA405] rounded-full p-1 mb-4 sm:mb-5">
+              <div className="flex bg-[#FFB547] rounded-full p-1 mb-4 sm:mb-5">
                 {['Home', 'Business', 'Institution'].map((tab) => (
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`flex-1 py-2 sm:py-2.5 text-xs sm:text-sm font-bold font-serif rounded-full transition-all uppercase tracking-wider ${
+                    className={`flex-1 min-h-[44px] px-2 text-xs sm:text-sm font-bold font-serif rounded-full transition-all uppercase tracking-wider ${
                       activeTab === tab
-                        ? 'bg-white text-[#09004c]'
-                        : 'text-[#09004c] hover:bg-white/20'
+                        ? 'bg-white text-[#0f0d1e]'
+                        : 'text-[#0f0d1e] hover:bg-white/20'
                     }`}
                   >
                     {tab}

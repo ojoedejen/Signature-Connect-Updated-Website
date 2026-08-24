@@ -9,7 +9,7 @@ const partnerLogos = [
 
 export default function TrustIndicators() {
   return (
-    <section className="bg-white py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+    <section className="bg-white py-14 sm:py-16 px-4 sm:px-6 lg:px-8 border-b border-[#e8e5f5]">
       <div className="max-w-7xl mx-auto">
         <h3 className="text-center text-xl sm:text-2xl font-semibold font-serif text-[#0f0d1e] mb-12">
           Trusted by Leading Organizations

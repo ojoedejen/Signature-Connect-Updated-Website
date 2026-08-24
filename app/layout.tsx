@@ -17,18 +17,18 @@ const sora = Sora({
 
 export const metadata: Metadata = {
   title: 'Signature Connect - Premium Internet Service Provider | Sierra Leone',
-  description: 'Sierra Leone\'s leading internet service provider since 2022. Fast, reliable fiber, microwave, and Starlink connectivity for homes and businesses.',
-  keywords: 'internet, ISP, Sierra Leone, fiber, broadband, Freetown, Signature Connect, high-speed internet',
+  description: 'High-speed internet access for homes, offices, and commercial establishments. Fiber, Starlink, and PMP connectivity with nationwide coverage, prepaid and postpaid options.',
+  keywords: 'internet, ISP, Sierra Leone, fiber, Starlink, PMP, broadband, Freetown, Signature Connect, high-speed internet, prepaid, postpaid',
   authors: [{ name: 'Signature Connect' }],
   openGraph: {
     title: 'Signature Connect - Premium Internet Service Provider',
-    description: 'Sierra Leone\'s leading ISP delivering fast, reliable connectivity through Fiber, Microwave, and Starlink.',
+    description: 'High-speed internet for homes, offices, and commercial establishments through Fiber, Starlink, and PMP.',
     type: 'website',
   },
 }
 
 export const viewport: Viewport = {
-  themeColor: '#7C5CF6',
+  themeColor: '#7454EC',
   width: 'device-width',
   initialScale: 1,
 }

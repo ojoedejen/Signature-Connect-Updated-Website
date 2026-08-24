@@ -17,7 +17,7 @@ const guides = [
   {
     title: 'Troubleshooting Slow Internet Speeds',
     content:
-      'If your internet is slow: 1. Restart your router by unplugging it for 30 seconds. 2. Move closer to your WiFi router. 3. Disconnect unused devices. 4. Check for outages on our Network Status page. 5. If the problem persists, contact our 24/7 support at +232 33 23 36 20.',
+      'If your internet is slow: 1. Restart your router by unplugging it for 30 seconds. 2. Move closer to your WiFi router. 3. Disconnect unused devices. 4. Check for outages on our Network Status page. 5. If the problem persists, contact our 24/7 support at +232 72568290.',
   },
   {
     title: 'Understanding Your Monthly Bill',
@@ -48,10 +48,10 @@ export default function KnowledgeBasePage() {
       <Header />
 
       {/* Hero */}
-      <section className="py-20 lg:py-32 min-h-[50vh] flex items-center relative z-0 premium-gradient">
+      <section className="py-20 sm:py-24 lg:py-28 flex items-center relative z-0 premium-surface">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center w-full">
-          <h1 className="max-w-2xl mx-auto font-serif font-bold text-5xl text-white mb-8 md:text-6xl md:leading-normal">
-            Knowledge <span className="gradient-text">Base</span>
+          <h1 className="max-w-3xl mx-auto font-serif font-bold text-4xl sm:text-5xl lg:text-6xl text-white mb-8 leading-tight">
+            Knowledge <span className="accent-text">Base</span>
           </h1>
           <p className="max-w-xl mx-auto text-lg font-normal leading-7 text-[#bdb8d8] font-sans">
             Browse our comprehensive guides and tutorials to get the most out of your Signature Connect service.
@@ -72,7 +72,7 @@ export default function KnowledgeBasePage() {
                 value={`item-${index}`}
                 className="bg-white rounded-xl border border-[#e8e5f5] px-8"
               >
-                <AccordionTrigger className="text-lg font-semibold text-left py-8 hover:no-underline font-serif text-[#0f0d1e] hover:text-[#7C5CF6]">
+                <AccordionTrigger className="text-lg font-semibold text-left py-8 hover:no-underline font-serif text-[#0f0d1e] hover:text-[#7454EC]">
                   {guide.title}
                 </AccordionTrigger>
                 <AccordionContent className="pb-8 text-[#6d6888] font-sans leading-relaxed">

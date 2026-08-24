@@ -75,7 +75,7 @@ function ProductShowcase() {
               <CardContent className="flex-grow flex flex-col justify-end">
                 <Button asChild className="btn-signature-primary w-full mt-4">
                   <a
-                    href="https://wa.me/23233233620"
+                    href="https://wa.me/23276340991"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center"
@@ -100,10 +100,10 @@ export default function PlansPage() {
       <Header />
 
       {/* Hero */}
-      <section className="py-20 lg:py-32 min-h-[50vh] flex items-center relative z-0 premium-gradient">
+      <section className="py-20 sm:py-24 lg:py-28 flex items-center relative z-0 premium-surface">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center w-full">
-          <h1 className="max-w-2xl mx-auto font-serif font-bold text-5xl text-white mb-8 md:text-6xl md:leading-normal">
-            Find Your <span className="gradient-text">Perfect Plan</span>
+          <h1 className="max-w-3xl mx-auto font-serif font-bold text-4xl sm:text-5xl lg:text-6xl text-white mb-8 leading-tight">
+            Find Your <span className="accent-text">Perfect Plan</span>
           </h1>
           <p className="max-w-xl mx-auto text-lg font-normal leading-7 text-[#bdb8d8] font-sans">
             Whether for home, business, or enterprise, we have a premium connectivity solution tailored to your needs.

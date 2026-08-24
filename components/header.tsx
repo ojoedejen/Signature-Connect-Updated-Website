@@ -19,8 +19,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="text-white py-2 sm:py-2.5 px-3 sm:px-4 relative" style={{ backgroundColor: '#09004c' }}>
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 to-transparent" />
+    <header className="text-white py-2 sm:py-2.5 px-3 sm:px-4 relative" style={{ backgroundColor: '#0f0d1e' }}>
       <div className="max-w-7xl mx-auto flex items-center justify-between relative z-10">
         <div className="flex items-center">
           <Link href="/">
@@ -38,7 +37,7 @@ export default function Header() {
             <Link
               key={item.name}
               href={item.path}
-              className="text-sm lg:text-base hover:text-yellow-300 transition-colors font-medium font-serif relative group"
+              className="text-sm lg:text-base hover:text-yellow-300 transition-colors font-medium font-serif relative group inline-flex items-center min-h-[44px]"
             >
               {item.name}
               <div className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-300 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
@@ -48,10 +47,14 @@ export default function Header() {
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-2 lg:gap-3">
-          <Globe className="w-4 h-4 lg:w-5 lg:h-5 text-yellow-300 cursor-pointer" />
-          <HelpCircle className="w-4 h-4 lg:w-5 lg:h-5 text-yellow-300 cursor-pointer" />
-          <Button asChild className="bg-yellow-400 text-blue-600 hover:bg-yellow-300 rounded-full px-4 sm:px-5 lg:px-6 py-1.5 sm:py-2 font-serif font-semibold text-xs sm:text-sm">
-            <a href="https://wa.me/23233233620" target="_blank" rel="noopener noreferrer">
+          <button type="button" aria-label="Language" className="w-11 h-11 inline-flex items-center justify-center rounded-lg hover:bg-white/10 transition-colors">
+            <Globe className="w-5 h-5 text-yellow-300" />
+          </button>
+          <button type="button" aria-label="Help" className="w-11 h-11 inline-flex items-center justify-center rounded-lg hover:bg-white/10 transition-colors">
+            <HelpCircle className="w-5 h-5 text-yellow-300" />
+          </button>
+          <Button asChild className="bg-yellow-400 text-[#0f0d1e] hover:bg-yellow-300 rounded-full min-h-[44px] px-5 lg:px-6 font-serif font-semibold text-xs sm:text-sm">
+            <a href="https://wa.me/23276340991" target="_blank" rel="noopener noreferrer">
               Contact Sales
             </a>
           </Button>
@@ -61,7 +64,9 @@ export default function Header() {
         <div className="md:hidden">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="p-1.5 hover:bg-white/10 rounded-lg transition-colors"
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMenuOpen}
+            className="w-11 h-11 inline-flex items-center justify-center hover:bg-white/10 rounded-lg transition-colors"
           >
             {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -70,21 +75,21 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 border-t border-white/10 z-50" style={{ backgroundColor: '#09004c' }}>
+        <div className="md:hidden absolute top-full left-0 right-0 border-t border-white/10 z-50" style={{ backgroundColor: '#0f0d1e' }}>
           <nav className="px-3 sm:px-4 py-4 space-y-2">
             {navLinks.map((item) => (
               <Link
                 key={item.name}
                 href={item.path}
-                className="block text-sm hover:text-yellow-300 font-medium font-serif py-2 border-b border-white/10 hover:bg-white/5 px-2 rounded"
+                className="flex items-center min-h-[44px] text-sm hover:text-yellow-300 font-medium font-serif border-b border-white/10 hover:bg-white/5 px-2 rounded"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
             <div className="pt-3 flex justify-end">
-              <Button asChild className="bg-yellow-400 text-blue-600 hover:bg-yellow-300 rounded-full px-4 py-1.5 font-serif font-semibold text-xs">
-                <a href="https://wa.me/23233233620" target="_blank" rel="noopener noreferrer">
+              <Button asChild className="bg-yellow-400 text-[#0f0d1e] hover:bg-yellow-300 rounded-full min-h-[44px] px-5 font-serif font-semibold text-xs">
+                <a href="https://wa.me/23276340991" target="_blank" rel="noopener noreferrer">
                   Contact Sales
                 </a>
               </Button>

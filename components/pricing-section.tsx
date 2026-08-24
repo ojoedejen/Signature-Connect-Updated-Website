@@ -91,11 +91,11 @@ const businessPlans = [
 
 export default function PricingSection() {
   return (
-    <section className="py-20 sm:py-28 lg:py-36 min-h-screen flex flex-col justify-center bg-[#f8f7ff]">
+    <section className="section bg-[#f8f7ff]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="text-center mb-16 lg:mb-20">
+        <div className="text-center section-head">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif text-[#0f0d1e] mb-6">
-            Choose Your <span className="gradient-text">Plan</span>
+            Choose Your <span className="accent-text-light">Plan</span>
           </h2>
           <p className="text-[#6d6888] text-lg sm:text-xl max-w-2xl mx-auto font-sans">
             Affordable plans for every need. All plans include unlimited data and professional installation.
@@ -122,7 +122,7 @@ export default function PricingSection() {
                   <div
                     className={`absolute -top-4 left-1/2 -translate-x-1/2 px-5 py-1.5 rounded-full text-xs font-bold font-serif ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-[#FFB547] to-[#ffcc5c] text-[#0f0d1e]'
+                        ? 'bg-[#FFB547] text-[#0f0d1e]'
                         : 'bg-[#f0eefb] text-[#6d6888]'
                     }`}
                   >
@@ -133,7 +133,7 @@ export default function PricingSection() {
                 <div className="mt-4">
                   {/* Speed */}
                   <div className="flex items-center gap-2 mb-3">
-                    <Zap className={`w-5 h-5 ${plan.popular ? 'text-[#FFB547]' : 'text-[#7C5CF6]'}`} />
+                    <Zap className={`w-5 h-5 ${plan.popular ? 'text-[#FFB547]' : 'text-[#7454EC]'}`} />
                     <span className={`text-sm font-medium ${plan.popular ? 'text-[#bdb8d8]' : 'text-[#6d6888]'}`}>
                       {plan.speed}
                     </span>
@@ -147,7 +147,7 @@ export default function PricingSection() {
                   {/* Price */}
                   <div className="mb-8">
                     <div className="flex items-baseline gap-2">
-                      <span className={`text-4xl sm:text-5xl font-bold font-serif ${plan.popular ? 'text-white' : 'text-[#7C5CF6]'}`}>
+                      <span className={`text-4xl sm:text-5xl font-bold font-serif ${plan.popular ? 'text-white' : 'text-[#7454EC]'}`}>
                         NLe {plan.price}
                       </span>
                       <span className={`text-sm ${plan.popular ? 'text-[#bdb8d8]' : 'text-[#6d6888]'}`}>/mon</span>
@@ -165,15 +165,16 @@ export default function PricingSection() {
                   </ul>
 
                   {/* CTA Button */}
-                  <Link href={`/payment?plan=${encodeURIComponent(plan.name)}&price=${plan.price}&speed=${plan.speed}`}>
-                    <Button
-                      className={`w-full py-4 rounded-xl font-serif font-bold ${
-                        plan.popular ? 'btn-signature-primary' : 'bg-[#7C5CF6] text-white hover:bg-[#6644e0]'
-                      }`}
-                    >
+                  <Button
+                    asChild
+                    className={`w-full min-h-[44px] py-4 rounded-xl font-serif font-bold ${
+                      plan.popular ? 'btn-signature-primary' : 'bg-[#7454EC] text-white hover:bg-[#5f40d4]'
+                    }`}
+                  >
+                    <Link href={`/payment?plan=${encodeURIComponent(plan.name)}&price=${plan.price}&speed=${plan.speed}`}>
                       Get Started
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
                 </div>
               </div>
             ))}
@@ -203,7 +204,7 @@ export default function PricingSection() {
                   <div
                     className={`absolute -top-4 left-1/2 -translate-x-1/2 px-5 py-1.5 rounded-full text-xs font-bold font-serif ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-[#FFB547] to-[#ffcc5c] text-[#0f0d1e]'
+                        ? 'bg-[#FFB547] text-[#0f0d1e]'
                         : 'bg-[#f0eefb] text-[#6d6888]'
                     }`}
                   >
@@ -214,7 +215,7 @@ export default function PricingSection() {
                 <div className="mt-4">
                   {/* Speed */}
                   <div className="flex items-center gap-2 mb-3">
-                    <Zap className={`w-5 h-5 ${plan.popular ? 'text-[#FFB547]' : 'text-[#7C5CF6]'}`} />
+                    <Zap className={`w-5 h-5 ${plan.popular ? 'text-[#FFB547]' : 'text-[#7454EC]'}`} />
                     <span className={`text-sm font-medium ${plan.popular ? 'text-[#bdb8d8]' : 'text-[#6d6888]'}`}>
                       {plan.speed}
                     </span>
@@ -228,7 +229,7 @@ export default function PricingSection() {
                   {/* Price */}
                   <div className="mb-8">
                     <div className="flex items-baseline gap-2">
-                      <span className={`text-3xl sm:text-4xl font-bold font-serif ${plan.popular ? 'text-white' : 'text-[#7C5CF6]'}`}>
+                      <span className={`text-3xl sm:text-4xl font-bold font-serif ${plan.popular ? 'text-white' : 'text-[#7454EC]'}`}>
                         NLe {plan.price}
                       </span>
                       <span className={`text-sm ${plan.popular ? 'text-[#bdb8d8]' : 'text-[#6d6888]'}`}>/mon</span>
@@ -246,15 +247,16 @@ export default function PricingSection() {
                   </ul>
 
                   {/* CTA Button */}
-                  <Link href={`/payment?plan=${encodeURIComponent(plan.name)}&price=${plan.price}&speed=${plan.speed}`}>
-                    <Button
-                      className={`w-full py-4 rounded-xl font-serif font-bold ${
-                        plan.popular ? 'btn-signature-primary' : 'bg-[#7C5CF6] text-white hover:bg-[#6644e0]'
-                      }`}
-                    >
+                  <Button
+                    asChild
+                    className={`w-full min-h-[44px] py-4 rounded-xl font-serif font-bold ${
+                      plan.popular ? 'btn-signature-primary' : 'bg-[#7454EC] text-white hover:bg-[#5f40d4]'
+                    }`}
+                  >
+                    <Link href={`/payment?plan=${encodeURIComponent(plan.name)}&price=${plan.price}&speed=${plan.speed}`}>
                       Get Started
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
                 </div>
               </div>
             ))}

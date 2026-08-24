@@ -4,6 +4,7 @@ import HeroSection from '@/components/hero-section'
 import TrustIndicators from '@/components/trust-indicators'
 import AboutUsSection from '@/components/about-us-section'
 import ServicesSection from '@/components/services-section'
+import BusinessConnectivity from '@/components/business-connectivity'
 import BroadbandSection from '@/components/broadband-section'
 import PricingSection from '@/components/pricing-section'
 import DiscoverMore from '@/components/discover-more'
@@ -19,6 +20,7 @@ export default function Home() {
       <TrustIndicators />
       <AboutUsSection />
       <ServicesSection />
+      <BusinessConnectivity />
       <BroadbandSection />
       <PricingSection />
       <DiscoverMore />

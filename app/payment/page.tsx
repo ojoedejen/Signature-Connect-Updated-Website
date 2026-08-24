@@ -48,7 +48,7 @@ Address: ${formData.address}
 Contact Number: ${formData.contactNumber}
 Payment Reference: ${formData.paymentReference}
 Purpose of Payment: ${formData.purposeOfPayment}`
-    window.open(`https://wa.me/23233233620?text=${encodeURIComponent(message)}`, '_blank')
+    window.open(`https://wa.me/23276340991?text=${encodeURIComponent(message)}`, '_blank')
     setIsSubmitted(true)
     setIsSubmitting(false)
   }
@@ -58,7 +58,7 @@ Purpose of Payment: ${formData.purposeOfPayment}`
       <div className="min-h-screen bg-white">
         <TopBanner />
         <Header />
-        <div className="premium-gradient flex items-center justify-center py-32 sm:py-40 px-4 min-h-[70vh]">
+        <div className="premium-surface flex items-center justify-center py-32 sm:py-40 px-4 min-h-[70vh]">
           <div className="text-center bg-white/10 backdrop-blur-sm p-10 sm:p-14 rounded-3xl max-w-2xl mx-auto glass-card-strong">
             <CheckCircle className="w-20 h-20 text-[#FFB547] mx-auto mb-8" />
             <h1 className="text-4xl sm:text-5xl font-bold font-serif text-white mb-6">
@@ -85,7 +85,7 @@ Purpose of Payment: ${formData.purposeOfPayment}`
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-serif text-[#0f0d1e]">
-              Complete Your <span className="gradient-text">Subscription</span>
+              Complete Your <span className="accent-text-light">Subscription</span>
             </h1>
             <p className="mt-6 text-xl text-[#6d6888] font-sans">
               You&apos;re one step away from lightning-fast internet.
@@ -138,7 +138,22 @@ Purpose of Payment: ${formData.purposeOfPayment}`
                     />
                   </div>
                 </div>
-                <div className="p-5 bg-[#f8f7ff] rounded-lg mt-8 border border-[#e8e5f5]">
+                <div className="p-5 bg-[#f0eefb] rounded-lg mt-8 border border-[#e8e5f5] text-center">
+                  <h3 className="font-bold font-serif text-[#0f0d1e] mb-1">
+                    Pay online with Orange or Afrimoney
+                  </h3>
+                  <p className="font-sans text-sm text-[#6d6888] mb-3">
+                    Dial the code below from your mobile to complete payment.
+                  </p>
+                  <a
+                    href="tel:*715*901%23"
+                    className="inline-flex items-center justify-center min-h-[44px] text-3xl sm:text-4xl font-bold font-serif text-[#7454EC] tracking-wide hover:underline"
+                  >
+                    *715*901#
+                  </a>
+                </div>
+
+                <div className="p-5 bg-[#f8f7ff] rounded-lg mt-5 border border-[#e8e5f5]">
                   <h3 className="font-bold font-serif text-[#0f0d1e]">Bank Deposit</h3>
                   <p className="font-sans text-sm text-[#6d6888]">
                     Account Name: <strong className="text-[#0f0d1e]">Signature-Connect Limited</strong>
@@ -215,7 +230,7 @@ export default function PaymentPage() {
     <Suspense fallback={
       <div className="min-h-screen flex items-center justify-center bg-[#f8f7ff]">
         <div className="text-center">
-          <div className="w-8 h-8 border-4 border-[#7C5CF6] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <div className="w-8 h-8 border-4 border-[#7454EC] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-[#6d6888]">Loading...</p>
         </div>
       </div>

@@ -28,7 +28,7 @@ const recentIncidents = [
 const statusConfig: Record<string, { icon: typeof CheckCircle; color: string; bgColor: string }> = {
   Investigating: { icon: AlertCircle, color: 'text-[#FFB547]', bgColor: 'bg-[#FFB547]' },
   Identified: { icon: Wrench, color: 'text-[#f97316]', bgColor: 'bg-[#f97316]' },
-  Monitoring: { icon: Clock, color: 'text-[#7C5CF6]', bgColor: 'bg-[#7C5CF6]' },
+  Monitoring: { icon: Clock, color: 'text-[#7454EC]', bgColor: 'bg-[#7454EC]' },
   Resolved: { icon: CheckCircle, color: 'text-[#10b981]', bgColor: 'bg-[#10b981]' },
 }
 
@@ -39,10 +39,10 @@ export default function NetworkStatusPage() {
       <Header />
 
       {/* Hero */}
-      <section className="py-20 lg:py-32 min-h-[50vh] flex items-center relative z-0 premium-gradient">
+      <section className="py-20 sm:py-24 lg:py-28 flex items-center relative z-0 premium-surface">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center w-full">
-          <h1 className="max-w-2xl mx-auto font-serif font-bold text-5xl text-white mb-8 md:text-6xl md:leading-normal">
-            Network <span className="gradient-text">Status</span>
+          <h1 className="max-w-3xl mx-auto font-serif font-bold text-4xl sm:text-5xl lg:text-6xl text-white mb-8 leading-tight">
+            Network <span className="accent-text">Status</span>
           </h1>
           <p className="max-w-xl mx-auto text-lg font-normal leading-7 text-[#bdb8d8] font-sans">
             Check for any outages or scheduled maintenance in your area. We believe in transparency.

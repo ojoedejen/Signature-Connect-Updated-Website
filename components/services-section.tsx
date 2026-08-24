@@ -2,69 +2,69 @@
 
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { Wifi, Home, Cable, Building2, Satellite, GraduationCap, ArrowRight } from 'lucide-react'
+import { Wifi, Home, RadioTower, Building2, Satellite, ShieldCheck, ArrowRight } from 'lucide-react'
 
 const services = [
   {
     icon: Wifi,
-    title: 'High-Speed Internet',
-    description: 'Lightning-fast fiber optic internet with speeds up to 10 Gbps for seamless streaming, gaming, and working.',
+    title: 'Fiber Internet',
+    description: 'High-speed fiber connectivity for homes, offices, and commercial establishments, with symmetrical speeds and unlimited monthly data.',
     featured: true,
-    color: 'from-[#7C5CF6] to-[#9370ff]',
+    color: 'bg-[#7454EC]',
     route: '/plans',
   },
   {
     icon: Home,
     title: 'In-Home WiFi',
-    description: 'Complete home coverage with our advanced mesh WiFi systems, eliminating dead zones everywhere.',
+    description: 'Complete home coverage with advanced mesh WiFi, eliminating dead zones. Available on prepaid or postpaid monthly plans.',
     featured: false,
-    color: 'from-[#10b981] to-[#34d399]',
+    color: 'bg-[#10b981]',
     route: '/plans',
   },
   {
-    icon: Cable,
-    title: 'Streaming Services',
-    description: 'Optimized bandwidth for 4K streaming, video calls, and real-time content delivery.',
+    icon: RadioTower,
+    title: 'PMP Connectivity',
+    description: 'Point-to-Multipoint wireless links that reach offices and commercial sites quickly, where trenching fiber is not practical.',
     featured: false,
-    color: 'from-[#9370ff] to-[#ae96ff]',
-    route: '/plans',
+    color: 'bg-[#9370ff]',
+    route: '/business',
   },
   {
     icon: Building2,
     title: 'Business Solutions',
-    description: 'Enterprise-grade connectivity with SLA guarantees, dedicated support, and custom infrastructure.',
+    description: 'Fiber, Starlink, and PMP for business. Run one as your primary link and another as backup for uninterrupted service.',
     featured: false,
-    color: 'from-[#f43f5e] to-[#fb7185]',
+    color: 'bg-[#f43f5e]',
     route: '/business',
   },
   {
     icon: Satellite,
-    title: 'Starlink Microwave',
-    description: 'Satellite-powered internet reaching even the most remote areas of Sierra Leone.',
+    title: 'Starlink Internet',
+    description: 'Satellite-powered connectivity reaching the most remote sites nationwide, ideal as a primary link or a resilient backup.',
     featured: false,
-    color: 'from-[#FFB547] to-[#ffcc5c]',
+    color: 'bg-[#FFB547]',
     route: '/plans',
   },
   {
-    icon: GraduationCap,
+    icon: ShieldCheck,
     title: 'VPN & IP Protection',
     description: 'Secure your connection with static IPs and VPN services for enhanced privacy and security.',
     featured: false,
-    color: 'from-[#38bdf8] to-[#7dd3fc]',
+    color: 'bg-[#38bdf8]',
     route: '/support',
   },
 ]
 
 export default function ServicesSection() {
   return (
-    <section className="py-24 sm:py-32 lg:py-40 min-h-screen flex items-center bg-white">
+    <section className="section bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="text-center mb-16 lg:mb-24">
+        <div className="text-center section-head">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif text-[#0f0d1e] mb-6">
-            Our <span className="gradient-text">Services</span>
+            Our <span className="accent-text-light">Services</span>
           </h2>
           <p className="text-[#6d6888] text-lg sm:text-xl max-w-2xl mx-auto font-sans">
-            Comprehensive internet solutions for homes, businesses, and institutions across Sierra Leone.
+            High-speed internet access for homes, offices, and commercial establishments &mdash; delivered over Fiber, Starlink, and PMP.
           </p>
         </div>
 
@@ -81,7 +81,7 @@ export default function ServicesSection() {
                 }`}
               >
                 <div
-                  className={`w-16 h-16 rounded-xl flex items-center justify-center mb-8 bg-gradient-to-r ${service.color}`}
+                  className={`w-16 h-16 rounded-xl flex items-center justify-center mb-8 ${service.color}`}
                 >
                   <Icon className="w-8 h-8 text-white" />
                 </div>
@@ -99,19 +99,20 @@ export default function ServicesSection() {
                 >
                   {service.description}
                 </p>
-                <Link href={service.route}>
-                  <Button
-                    variant={service.featured ? 'default' : 'outline'}
-                    className={`group ${
-                      service.featured
-                        ? 'btn-signature-primary'
-                        : 'border-[#e8e5f5] text-[#6d6888] hover:bg-[#f0eefb]'
-                    }`}
-                  >
+                <Button
+                  asChild
+                  variant={service.featured ? 'default' : 'outline'}
+                  className={`group min-h-[44px] ${
+                    service.featured
+                      ? 'btn-signature-primary'
+                      : 'border-[#e8e5f5] text-[#6d6888] hover:bg-[#f0eefb]'
+                  }`}
+                >
+                  <Link href={service.route}>
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
+                  </Link>
+                </Button>
               </div>
             )
           })}
